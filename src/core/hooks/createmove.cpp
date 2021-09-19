@@ -26,11 +26,17 @@ bool Hooks::CreateMove::hook(void* thisptr, float flInputSampleTime, CUserCmd* c
             Features::Movement::prePredCreateMove(cmd);
 
             Features::Prediction::start(cmd);
-                if (CONFIGBOOL("Rage>Enabled")) {
+                if (CONFIGBOOL("Misc>Misc>Misc>Gay mode") && CONFIGBOOL("Rage>Enabled")) {
+                    Features::LegitBot::createMove(cmd);
+                    Features::AntiAim::createMove(cmd);
+                }
+                else if(CONFIGBOOL("Rage>Enabled") && !CONFIGBOOL("Misc>Misc>Misc>Gay mode") )
+                {
                     Features::RageBot::createMove(cmd);
                     Features::AntiAim::createMove(cmd);
                 }
-                else {
+                else    
+                 {
                     Features::LegitBot::createMove(cmd);
                     Features::Triggerbot::createMove(cmd);
                     Features::Backtrack::store(cmd);

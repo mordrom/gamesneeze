@@ -10,6 +10,9 @@ void Menu::drawMiscTab() {
             ImGui::BeginChild("Misc", ImVec2(ImGui::GetWindowContentRegionWidth() * 0.61, ImGui::GetWindowHeight() * 0.64f), true); {
                 ImGui::Text("Misc");
                 ImGui::Separator();
+                ImGui::Text("Become Gay");
+                ImGui::Checkbox("Gay mode",&CONFIGBOOL("Misc>Misc>Misc>Gay mode"));
+                ImGui::Separator();
                 ImGui::Checkbox("Developer window", &devWindow);
                 ImGui::Checkbox("Disable Watermark", &CONFIGBOOL("Misc>Misc>Misc>Disable Watermark"));
                 ImGui::Checkbox("Force square radar", &CONFIGBOOL("Misc>Misc>Misc>Force square radar"));

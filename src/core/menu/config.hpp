@@ -339,7 +339,7 @@ namespace Config {
             CONFIGITEM("Misc>Misc>Hitmarkers>Hitmarkers", false),
             CONFIGITEM("Misc>Misc>Hitmarkers>Hitsound", false),
             CONFIGITEM("Misc>Misc>Hitmarkers>Damage Markers", false),
-
+            CONFIGITEM("Misc>Misc>Misc>Gay mode",false),
             CONFIGITEM("Misc>Misc>Misc>Disable Watermark", false),
             CONFIGITEM("Misc>Misc>Misc>Force square radar", false),
             CONFIGITEM("Misc>Misc>Misc>Rank Revealer", false),

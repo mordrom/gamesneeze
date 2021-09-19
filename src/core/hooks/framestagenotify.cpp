@@ -13,7 +13,8 @@ void Hooks::FrameStageNotify::hook(void* thisptr, FrameStage frame) {
 
     if (frame == FRAME_RENDER_START) {
         cachePlayers();
-        if (Globals::localPlayer && Globals::localPlayer->health() > 0 && Interfaces::input->m_fCameraInThirdPerson) {
+
+        if (Globals::localPlayer && Globals::localPlayer->health() > 0 && Interfaces::input->m_fCameraInThirdPerson ) {
             QAngle viewAngles;
             Interfaces::engine->GetViewAngles(viewAngles);
             Globals::localPlayer->viewAngles()->y = CONFIGBOOL("Rage>Enabled") ? Features::AntiAim::fakeYaw : viewAngles.y;
